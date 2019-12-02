@@ -15,10 +15,24 @@ Więcej na ten temat: https://cssreset.com/what-is-a-css-reset/
 body {
     margin: 0;
     padding: 0;
+    color: rgba(204, 200, 255, 0.8);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('./images/background.svg');
 }
 
 h1, h2, h3 {
     margin: 0;
+}
+
+a {
+    color: #EF008E;
+    text-decoration: none;
 }
 
 ul {
@@ -44,30 +58,214 @@ Więcej na ten temat: https://webaim.org/techniques/css/invisiblecontent/
     overflow: hidden;
 }
 
-/*
-Sekcja pomocnicza, aby zwizualizować pozycje głównych bloków strony. Będzie usunięta w następnych krokach.
-*/
 .page-header {
-    background-color: #ffb1b1;
+    position: fixed;
+    top: 50px;
+    left: 50px;
 }
 
 .page-content {
-    background-color: #b0ffb0;
+    margin-left: 250px;
+    padding: 0 10%;
+    text-align: left;
 }
 
 .page-footer {
-    background-color: #7ba3ff;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
 }
 
 .content-section {
-    background-color: #ca9aca;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
 }
-.content-section:nth-child(odd) {
-    background-color: #e69fe6;
+
+.content-section__header {
+    color: #EF008E;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
 }
-/*
-Koniec sekcji pomocniczej
-*/
+
+.content-section__body {
+    flex-grow: 1;
+}
+
+.content-section.home-section {
+    align-items: center;
+}
+
+
+/* Navigation */
+
+.page-navigation__items {
+    padding-top: 15px;
+}
+
+.page-navigation__link {
+    line-height: 30px;
+    letter-spacing: 6.7px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+/* Band members */
+
+.band-members {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.band-members__name {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+/* About */
+
+#about {
+    position: relative;
+    margin-bottom: 115px;    
+    margin-left: 290px;
+}
+
+.about__image {
+    max-width: 100%;
+    border-top: 3px solid #EF008E;
+}
+
+.about__desc-header {
+    margin-bottom: 30px;
+    color: #CCC8FF;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about__desc {
+    position: absolute;
+    bottom: -115px;
+    left: -290px; 
+    width: 380px;
+    padding: 30px;
+    background-color: #25072e;
+    border-bottom: 3px solid #EF008E;
+}
+
+/* Concerts */
+
+.concerts {
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 55px;
+    row-gap: 45px;
+}
+
+.concerts__image {
+    max-width: 100%;
+    border-bottom: 3px solid #EF008E;
+}
+
+.concerts__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.concerts__info-base {
+    flex-grow: 1;
+}
+
+.concerts__date {
+    margin: 0;
+    color: #CCC8FF;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3.8px;
+}
+
+.concerts__location {
+    margin: 0;
+    letter-spacing: 3.8px;
+}
+
+
+/* Video */
+
+.embedded-video {
+    border-top: 3px solid #EF008E;
+}
+
+
+/* Photos */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    gap: 20px;
+}
+
+.gallery__image {
+    max-width: 100%;
+    border-top: 3px solid #EF008E;
+}
+
+
+/* Contact */
+
+.contact {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contact__image {
+    max-width: 100%;
+}
+
+.contact__address {
+    font-style: normal;
+    padding: 50px;
+}
+
+.contact__form {
+    flex-basis: 50%;
+    padding-top: 40px;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: 9px;
+}
+
+.form__field {
+    margin-bottom: 10px;
+}
+
+.form__input {
+    display: block;
+    width: 300px;
+    height: 35px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(219, 216, 251, 0.1);
+}
 
 /*
 Ustawiając sekcje nagłówka i stopki w pozycji 'fixed' sprawiamy,
@@ -101,15 +299,22 @@ Właściwość "text-align: right" przykleja zawartość do prawej strony
 .page-content {
     margin-left: 220px;
     padding: 0 10%;
-    text-align: right;
 }
 
-/*
-Projekt graficzny zakłada, że każda sekcja strony będzie wypełniać całą wysokość okna przeglądarki
-lub więcej, jeśli zawartość danej sekcji jest wyższa. Dlatego świetnym rozwiązaniem
-będzie użycie jednostki "vh", która oznacza 1% wysokości okna przeglądarki z właściwością "min-height",
-która wymusza wysokość elementu na zadaną wartość lub wyższą.
-*/
-.content-section {
-    min-height: 100vh;
+.button {
+    padding: 7px 15px;
+    border-radius: 3px;
+    color: rgba(204, 200, 255, 0.8);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    background-color: rgba(204, 200, 255, 0.1);
+    border-color: rgba(204, 200, 255, 0.1);
+    cursor: pointer;
 }
+
+.button--contact {
+    margin-top: 20px;
+}
+

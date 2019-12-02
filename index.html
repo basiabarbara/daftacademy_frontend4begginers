@@ -3,6 +3,7 @@
     <head>
         <title>6BM Band Official Website</title>
         <link rel="stylesheet" type="text/css" href="./style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
     </head>
     <body>
         <header class="page-header">
@@ -12,22 +13,22 @@
             <nav class="page-navigation">
                 <ul class="page-navigation__items">
                     <li class="page-navigation__item">
-                        <a href="#home">Home</a>
+                        <a class="page-navigation__link" href="#home">Home</a>
                     </li>
                     <li class="page-navigation__item">
-                        <a href="#about">About</a>
+                        <a class="page-navigation__link" href="#about">About</a>
                     </li>
                     <li class="page-navigation__item">
-                        <a href="#concerts">Concerts</a>
+                        <a class="page-navigation__link" href="#concerts">Concerts</a>
                     </li>
                     <li class="page-navigation__item">
-                        <a href="#video">Video</a>
+                        <a class="page-navigation__link" href="#video">Video</a>
                     </li>
                     <li class="page-navigation__item">
-                        <a href="#photos">Photos</a>
+                        <a class="page-navigation__link" href="#photos">Photos</a>
                     </li>
                     <li class="page-navigation__item">
-                        <a href="#contact">Contact</a>
+                        <a class="page-navigation__link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -78,17 +79,19 @@
                 </ul>
 
             </section>
-            <section id="about" class="content-section about-section">
+            <section id="about" class="content-section">
                 <h2 class="content-section__header">About</h2>
-                <img src="./images/band01.jpg" alt="Image of band members standing at the construction site" />
-                <div class="about-section__desc">
-                    <h3 class="about-section__desc-header">Straight from Lublin</h3>
-                    <p class="about-section__desc-details">
-                        6BM is a young band which has it's origins in the city of Lublin, playing music described as electrorock.<br/>
-                        Band members aim to convey emotions, reflexion but also hope.<br/><br/>
-                        They are inspired by various genres, like: alternative rock, nu-metal, synthwave or even drum'n'bass.<br/>
-                        As for now they released their debut EP - TRINITY and they started working on their first full length album.
-                    </p>
+                <div class="about">
+                    <img class="about__image" src="./images/band01.jpg" alt="Image of band members standing at the construction site" />
+                    <div class="about__desc">
+                        <h3 class="about__desc-header">Straight from Lublin</h3>
+                        <p class="about__desc-details">
+                            6BM is a young band which has it's origins in the city of Lublin, playing music described as electrorock.<br/>
+                            Band members aim to convey emotions, reflexion but also hope.<br/><br/>
+                            They are inspired by various genres, like: alternative rock, nu-metal, synthwave or even drum'n'bass.<br/>
+                            As for now they released their debut EP - TRINITY and they started working on their first full length album.
+                        </p>
+                    </div>
                 </div>
             </section>
             <section id="concerts" class="content-section">
@@ -166,24 +169,26 @@
             </section>
             <section id="contact" class="content-section">
                 <h2 class="content-section__header">Contact</h2>
-                <img class="gallery__image" src="./images/band12.jpg" alt="Image of band members posing next to a train" />
-                <address>
-                    Tel: 123 456 789<br/>
-                    E-mail: 6bmmusic@gmail.com
-                </address>
-                <form class="form">
-                    <div class="form__field">
-                        <label class="form__label" for="email">E-mail</label>
-                        <input class="form__input" type="email" name="email" id="email" required />
+                <div class="contact">
+                    <img class="contact__image" src="./images/band12.jpg" alt="Image of band members posing next to a train" />
+                    <div class="contact__address">
+                        Tel: 123 456 789<br/>
+                        E-mail: 6bmmusic@gmail.com
                     </div>
-                    <div class="form__field">
-                        <label class="form__label" for="topic">Topic</label>
-                        <input class="form__input" type="text" name="topic" id="topic" required />
+                    <div class="contact__form">
+                        <div class="form__field">
+                            <label class="form__label" for="email">E-mail</label>
+                            <input class="form__input" type="email" name="email" id="email" required />
+                        </div>
+                        <div class="form__field">
+                            <label class="form__label" for="topic">Topic</label>
+                            <input class="form__input" type="text" name="topic" id="topic" required />
+                        </div>
+                        <div class="form__field">
+                            <button class="button" type="submit">Contact us!</button>
+                        </div>
                     </div>
-                    <div class="form__field">
-                        <button class="button" type="submit">Contact us!</button>
-                    </div>
-                </form>
+                </div>
             </section>
         </main>
         <footer class="page-footer">

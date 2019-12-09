@@ -4,6 +4,7 @@
         <title>6BM Band Official Website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="./style.css" />
+        <script src="script.js" defer></script>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -12,6 +13,11 @@
                 <img src="./images/logo.png" alt="6BM logo" />
             </h1>
             <nav class="page-navigation">
+
+                <!-- Hamburger -->
+                <label for="hamburger">&#9776;</label>
+                <input type="checkbox" id="hamburger"/>
+
                 <ul class="page-navigation__items">
                     <li class="page-navigation__item">
                         <a class="page-navigation__link" href="#home">Home</a>
@@ -86,7 +92,7 @@
                                 <p class="concerts__date">20.12.2018</p>
                                 <p class="concerts__location">Lublin, klub XXX</p>
                             </div>
-                            <button class="button">Buy a ticket</button>
+                            <button id="button-Lub" class="button">Buy a ticket</button>
                         </header>
                     </article>
                     <article class="concerts__item">
@@ -96,7 +102,7 @@
                                 <p class="concerts__date">20.12.2018</p>
                                 <p class="concerts__location">Warszawa, klub YYY</p>
                             </div>
-                            <button class="button">Buy a ticket</button>
+                            <button id="button-War" class="button">Buy a ticket</button>
                         </header>
                     </article>
                     <article class="concerts__item">
@@ -106,7 +112,7 @@
                                 <p class="concerts__date">20.12.2018</p>
                                 <p class="concerts__location">Kraków, klub ZZZ</p>
                             </div>
-                            <button class="button">Buy a ticket</button>
+                            <button id="button-Kra" class="button">Buy a ticket</button>
                         </header>
                     </article>
                     <article class="concerts__item">
@@ -116,16 +122,16 @@
                                 <p class="concerts__date">20.12.2018</p>
                                 <p class="concerts__location">Poznań, klub AAA</p>
                             </div>
-                            <button class="button">Buy a ticket</button>
+                            <button id="button-Poz" class="button">Buy a ticket</button>
                         </header>
                     </article>
                 </div>
             </section>
-            <section class="content-section">
+            <section id="video" class="content-section">
                 <h2 class="content-section__header">Video</h2>
                 <iframe class="embedded-video" width="853" height="480" src="https://www.youtube.com/embed/AstRXh-vKNI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </section>
-            <section class="photos" class="content-section">
+            <section id="photos" class="content-section">
                 <h2 class="content-section__header">Photos</h2>
                 <ul class="gallery">
                     <li class="gallery__item">
@@ -213,14 +219,14 @@
                     <div class="contact__form">
                         <div class="form__field">
                             <label class="form__label" for="email">E-mail</label>
-                            <input class="form__input" type="email" name="email" id="email" required />
+                            <input id="email" class="form__input" type="email" name="email" id="email" required />
                         </div>
                         <div class="form__field">
                             <label class="form__label" for="topic">Topic</label>
-                            <input class="form__input" type="text" name="topic" id="topic" required />
+                            <input id="topic" class="form__input" type="text" name="topic" id="topic" required />
                         </div>
                         <div class="form__field">
-                            <button class="button" type="submit">Contact us!</button>
+                            <button id="submit" class="button" type="submit">Contact us!</button>
                         </div>
                     </div>
                 </div>
